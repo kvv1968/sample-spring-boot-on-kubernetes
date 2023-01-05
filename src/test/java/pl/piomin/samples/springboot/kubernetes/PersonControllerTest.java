@@ -2,6 +2,7 @@ package pl.piomin.samples.springboot.kubernetes;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.test.context.TestPropertySource;
 import pl.piomin.samples.springboot.kubernetes.domain.Gender;
 import pl.piomin.samples.springboot.kubernetes.domain.Person;
 
@@ -11,6 +12,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@TestPropertySource(properties = "spring.mongodb.embedded.version=3.5.5")
 public class PersonControllerTest {
 
 	@LocalServerPort
