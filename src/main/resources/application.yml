@@ -3,12 +3,18 @@ spring:
     name: sample-spring-boot-on-kubernetes
   data:
     mongodb:
-      host: ${MONGO_URL}
-      port: 27017
-      username: ${MONGO_USERNAME}
-      password: ${MONGO_PASSWORD}
-      database: ${MONGO_DATABASE}
+#      username: ${MONGO_USERNAME:springboot}
+#      password: ${MONGO_PASSWORD:springboot123}
+#      database: ${MONGO_DATABASE:springboot}
+#      authentication-database: admin
       authentication-database: admin
+      username: springboot #your_root_user     (default->rootuser)
+      password: springboot123 #your_root_password (default->rootpass)
+      database: springboot #your_db_name
+      port: 27017 #your_port              (default->27017)
+      host: localhost #your_host              (default->localhost)
+      uri: mongodb://springboot:springboot123@localhost:27017/writeapp?authSource=admin #mongodb://writeApp:writeApp9779@localhost:27017/writeapp?authSource=admin
+
 #logging:
 #  pattern:
 #    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"

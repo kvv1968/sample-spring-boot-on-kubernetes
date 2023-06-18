@@ -2,10 +2,12 @@ package pl.piomin.samples.springboot.kubernetes.repository;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Repository;
 import pl.piomin.samples.springboot.kubernetes.domain.Person;
 
 import org.springframework.data.repository.CrudRepository;
 
+@Repository
 public interface PersonRepository extends CrudRepository<Person, String> {
 
 	Set<Person> findByFirstNameAndLastName(String firstName, String lastName);

@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import pl.piomin.samples.springboot.kubernetes.domain.Gender;
 import pl.piomin.samples.springboot.kubernetes.domain.Person;
